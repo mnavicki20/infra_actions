@@ -57,9 +57,9 @@ jobs:
           key: ${{ secrets.MY_SSH_KEY }}
           passphrase: ${{ secrets.MY_PASSPHRASE }}
           script: |
-            sudo docker pull mnavicki20/new_test_image
+            sudo docker pull ${{ secrets.DOCKER_USER }}/new_test_image
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 mnavicki20/new_test_image
+            sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USER }}/new_test_image
 
   send_message:
     runs-on: ubuntu-latest
