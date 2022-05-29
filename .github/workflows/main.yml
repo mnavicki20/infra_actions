@@ -55,7 +55,6 @@ jobs:
           host: ${{ secrets.MY_HOST }}
           username: ${{ secrets.MY_USER }}
           key: ${{ secrets.MY_SSH_KEY }}
-          passphrase: ${{ secrets.MY_PASSPHRASE }}
           script: |
             sudo docker pull mnavicki20/new_test_image
             sudo docker stop $(sudo docker ps -a -q)
