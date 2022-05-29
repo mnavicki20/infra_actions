@@ -43,7 +43,7 @@ jobs:
           uses: docker/build-push-action@v2 
           with:
             push: true
-            tags: mnavicki/new_test_image:latest
+            tags: mnavicki20/new_test_image:latest
 
   deploy:
       runs-on: ubuntu-latest
